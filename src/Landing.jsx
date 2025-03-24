@@ -1,6 +1,69 @@
 import React, { useEffect } from 'react';
 import './Landing.css';
 function Landing() {
+    //nav burger
+    useEffect(() => {
+        const navToggle = document.getElementById('navToggle');
+        const navigation = document.querySelector('.navigation');
+
+        navToggle.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+        });
+
+        return () => {
+            navToggle.removeEventListener('click', () => {
+                navigation.classList.toggle('active');
+            });
+        };
+    }, []);
+
+    //main section
+    useEffect(() => {
+        const gridItems = document.querySelectorAll('.grid-item');
+        const imageBackground = document.getElementById('imageBackground');
+        const overlay = document.createElement('div'); 
+        overlay.classList.add('image-overlay');
+        imageBackground.parentElement.appendChild(overlay); 
+
+        let activeItem = null; 
+
+        gridItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                const newImage = item.getAttribute('data-image');
+
+                if (activeItem === item) {
+                    imageBackground.classList.remove('active'); 
+                    overlay.classList.remove('hidden'); 
+                    activeItem = null; 
+                } else {
+                    imageBackground.style.backgroundImage = `url('${newImage}')`; 
+                    imageBackground.classList.add('active'); 
+                    overlay.classList.add('hidden'); 
+                    activeItem = item; 
+                }
+            });
+
+            // Add hover event listeners
+            item.addEventListener('mouseenter', () => {
+                imageBackground.classList.add('hover-active');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                if (activeItem !== item) {
+                    imageBackground.classList.remove('hover-active');
+                }
+            });
+        });
+
+        return () => {
+            gridItems.forEach((item) => {
+                item.removeEventListener('click', () => {});
+                item.removeEventListener('mouseenter', () => {});
+                item.removeEventListener('mouseleave', () => {});
+            });
+        };
+    }, []);
+
 
     // Gallery
     useEffect(() => {
@@ -58,6 +121,7 @@ function Landing() {
         };
     }, []);
 
+    //accordion
     useEffect(() => {
         const accordions = document.querySelectorAll(".accordion");
         const image = document.getElementById("accordionImage");
@@ -109,55 +173,6 @@ function Landing() {
             accordions.forEach((accordion) => {
                 accordion.removeEventListener("click", function () {
                 });
-            });
-        };
-    }, []);
-
-    useEffect(() => {
-        const gridItems = document.querySelectorAll('.grid-item');
-        const imageBackground = document.getElementById('imageBackground');
-        const overlay = document.createElement('div'); 
-        overlay.classList.add('image-overlay');
-        imageBackground.parentElement.appendChild(overlay); 
-
-        let activeItem = null; 
-
-        gridItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                const newImage = item.getAttribute('data-image');
-
-                if (activeItem === item) {
-                    imageBackground.classList.remove('active'); 
-                    overlay.classList.remove('hidden'); 
-                    activeItem = null; 
-                } else {
-                    imageBackground.style.backgroundImage = `url('${newImage}')`; 
-                    imageBackground.classList.add('active'); 
-                    overlay.classList.add('hidden'); 
-                    activeItem = item; 
-                }
-            });
-        });
-
-        return () => {
-            gridItems.forEach((item) => {
-                item.removeEventListener('click', () => {
-                });
-            });
-        };
-    }, []);
-
-    useEffect(() => {
-        const navToggle = document.getElementById('navToggle');
-        const navigation = document.querySelector('.navigation');
-
-        navToggle.addEventListener('click', () => {
-            navigation.classList.toggle('active');
-        });
-
-        return () => {
-            navToggle.removeEventListener('click', () => {
-                navigation.classList.toggle('active');
             });
         };
     }, []);
