@@ -4,8 +4,8 @@ function GallerySection() {
     return (
         <section className="ctu-gallery">
                         <header>
-                            <h1>Every building at CTU, covered</h1>
-                            <p className="subtext">What do you want to find on ATIN Map Directory</p>
+                            <h1 className='text-5xl font-extralight text-gray-900 tracking-wide text-center mb-12'>Every building at CTU, covered</h1>
+                            <p className="text-xl font-medium text-gray-900 tracking-wide text-center mb-12">What do you want to find on ATIN Map Directory</p>
                         </header>
         
                         <div className="ctu-gallery-container">

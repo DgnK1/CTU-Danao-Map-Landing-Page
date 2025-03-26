@@ -6,7 +6,7 @@ function ContributorsSection() {
                 {/* Header */}
                 <header>
                 
-                    <h1>Meet the power</h1>
+                    <h1 className='text-5xl font-extralight text-gray-900 tracking-wide text-center mb-12'>Meet the power</h1>
 
                 </header>
 

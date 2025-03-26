@@ -5,7 +5,7 @@ function PossibilitiesSection() {
     <section className="poss">
         {/* Heading */}
         <header>
-            <h1>
+            <h1 className='text-5xl font-extralight text-gray-900 tracking-wide text-center mb-12'>
             “...it’s going to do things you didn’t <br/> think were possible.”
             </h1>
         </header>
