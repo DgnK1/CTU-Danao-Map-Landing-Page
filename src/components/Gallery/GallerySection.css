@@ -1,0 +1,131 @@
+/*GALLERY-Categories*/
+.ctu-gallery {
+    margin: 50px auto;
+    max-width: 1800px;
+    width: 90%;
+}
+
+.ctu-gallery h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.ctu-gallery h4{
+    font-weight: 400;
+}
+
+/*gallery-styling*/
+.gallery {
+    margin: 30px auto;
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px; 
+    padding: 10px 0; 
+}
+
+.gallery div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px; 
+    flex: none; 
+    width: 100%; 
+}
+
+.gallery div img {
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+    opacity: 0.5;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+#nextBtn,
+#backBtn{
+    cursor: pointer;
+    background-color: #181b34;
+    color: #fff;
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.ctu-gallery .fa-arrow-right,
+.ctu-gallery .fa-arrow-left{
+    font-size: 1.5rem;
+    font-size: 400;
+}
+
+.ctu-gallery .fa-arrow-right {
+    margin-left: -25px;
+    z-index: 100;
+}
+
+.ctu-gallery .fa-arrow-left{
+    margin-right: -25px;
+    z-index: 100;
+}
+
+/*Category Products - INSIDE GALLERY*/
+.ctu-gallery-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1.5px solid #d3d3d3;
+    transition: all ease 0.3s;
+    text-align: center;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    display: block;
+    flex-direction: column;
+}
+
+.gallery-box .gallery-img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-box .gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.gallery-text {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-text .gallery-box-p-name{
+    color: #313131;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+}

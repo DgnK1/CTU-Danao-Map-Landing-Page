@@ -1,0 +1,182 @@
+/* Header Styling */
+header {
+    margin-bottom: 1rem;
+}
+
+header .logo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    color: #202020;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header .subtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+header a{
+    color: #a7a7a7;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/* MAIN */
+.main-container {
+    position: relative;
+    background-color: #f6f7fb;
+
+    max-width: 1800px;
+
+    margin: 0 auto;
+    text-align: center;
+
+    padding: 1rem 0;
+
+    border-radius: 2.5rem;
+
+    overflow: hidden;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    background-color: #6161ff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+header .btn-primary {
+    display: inline-block;
+    margin: 1rem 0;
+    background-color: #6161ff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/* Bottom Section */
+.bottom-section {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end; 
+    min-height: 500px; 
+    overflow: hidden;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #5151d5;
+}
+
+/* Floating Card */
+.floating-card {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    max-width: 400px;
+    text-align: center;
+    margin-right: 10%; /* Adjust this for the gap on the right */
+    margin-bottom: 4rem; /* Add space between the card and bottom */
+}
+
+/* Background Image */
+.image-background {
+    position: absolute;
+    top: 70%; 
+    left: 50%; 
+    transform: translate(-50%, -30%); 
+    width: 90%; 
+    height: 50%;
+    background: url('../images/EN CME.jpg') no-repeat center center / contain; 
+    filter: blur(10px);
+    transition: background-image 1s ease, filter 1s ease;
+    z-index: 1;
+}
+
+/* Remove Blur When Active */
+.image-background.active {
+    filter: blur(0); 
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Grid Layout for Icons */
+.grid-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Item Styling */
+.grid-item {
+    background: #f0f1f5;
+    color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-item i {
+    font-size: 1rem;
+    color: #6161ff;
+}
+
+.grid-item:hover {
+    background-color: #e0e1e5;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.active-item {
+    background-color: #d5d5f5; 
+    transform: scale(1.1);
+}
+
+/* Remove Blur when Active */
+.image-background.active {
+    filter: blur(0px);
+}
+
+/* Button Adjustments */
+.btn-secondary {
+    margin-top: 1rem;
+}
