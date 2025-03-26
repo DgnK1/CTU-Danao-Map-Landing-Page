@@ -23,8 +23,8 @@ const MainSection = () => {
       {/* Background Image */}
       <div
         id="imageBackground"
-        className={`absolute top-[80%] left-[90%] transform -translate-x-1/2 
-        -translate-y-[30%] w-[90%] h-1/2 bg-center bg-contain 
+        className={`absolute top-[80%] left-[100%] transform -translate-x-1/2 
+        -translate-y-[30%] w-[100%] h-[64%] bg-center bg-contain 
         bg-no-repeat transition-[background-image,filter] duration-1000 ease-in-out z-[1] ${
           isBlurred ? "blur-[10px]" : ""
         }`}
@@ -56,8 +56,7 @@ const MainSection = () => {
       {/* Bottom Section */}
       <section className="relative flex justify-end items-end min-h-[500px] overflow-hidden">
         {/* Floating Content Section */}
-        <div className="relative bg-white p-6 rounded-xl shadow-[10px_10px_4px_4px_rgba(194,14,14,1)] 
-        z-10 max-w-104 text-center mr-16 mb-16">
+        <div className="relative bg-white p-6 rounded-xl z-10 max-w-104 text-center mr-16 mb-16">
           <p className="text-base font-semibold mb-6 text-gray-700">Where would you like to navigate?</p>
           <div className="grid grid-cols-3 gap-4 mb-6">
             {[
