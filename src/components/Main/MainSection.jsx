@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 const MainSection = () => {
   const [activeItem, setActiveItem] = useState(null);
-  const [backgroundImage, setBackgroundImage] = useState("/images/EN CME.jpg");
+  const [backgroundImage, setBackgroundImage] = useState("/images/CTU-2-2.jpg");
   const [isBlurred, setIsBlurred] = useState(true);
 
   const handleItemClick = (index, image) => {
     if (activeItem === index) {
       setActiveItem(null);
-      setBackgroundImage("/images/EN CME.jpg");
+      setBackgroundImage("/images/CTU-2-2.jpg");
       setIsBlurred(true);
     } else {
       setActiveItem(index);
@@ -39,18 +39,10 @@ const MainSection = () => {
         <h1 className="text-5xl font-extralight text-gray-900 tracking-wide text-center mb-12">
           Made for nav, <br /> designed to love
         </h1>
-        <p className="flex justify-center items-center text-base text-gray-700 mb-6">
+        <p className="flex justify-center items-center text-base text-gray-700 mb-16">
           Streamline workflows and gain clear visibility across teams <br />
           to make strategic decisions with confidence.
         </p>
-
-        <a href="#" className="inline-block bg-green-600 text-white text-base no-underline 
-        font-semibold transition-colors duration-300 transform hover:bg-blue-900 focus:outline-none focus:ring
-         focus:ring-blue-300 focus:ring-opacity-80 px-6 py-3 rounded-[25px]
-        mx-0 my-4" 
-        id="buttonPrimary">
-          Get Started <i className="fa-solid fa-arrow-right"></i>
-        </a>
       </header>
 
       {/* Bottom Section */}

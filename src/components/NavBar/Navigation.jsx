@@ -1,63 +1,123 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navigation = () => {
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleSearchBox = () => {
+        setIsSearchOpen(!isSearchOpen);
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <nav class="bg-white border-gray-200 dark:bg-white">
-        <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="images/OTN logo.png" class="h-8" alt="Flowbite Logo" />
+        <nav className="flex justify-between items-center max-w-screen w-[90%] mx-auto px-4 py-4">
+            {/* Logo */}
+            <a href="index.html" className="logo">
+                <img
+                    className="max-w-40 max-h-10 object-contain"
+                    src="images/OTN logo.png"
+                    alt="logo"
+                />
             </a>
-            <div class="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
-                focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 
-                dark:focus:ring-blue-800">
-                    Get started
+
+            {/* Navigation Menu */}
+            <ul
+                className={`flex z-50 flex-col md:flex-row justify-center items-center pt-4 pb-4 absolute md:static top-16 left-0 w-full 
+                    md:w-auto bg-white md:bg-transparent md:gap-4 md:p-4 transition-transform duration-300 ${
+                    isMenuOpen ? '-translate-y-0' : '-translate-y-full'
+                } md:translate-y-0`}
+                id="menu"
+            >
+                <li>
+                    <a
+                        className="mx-4 p-2 rounded-full text-gray-500 font-medium transition-all 
+                        duration-200 ease-in-out hover:text-white hover:bg-gray-600"
+                        href="product-page.html"
+                    >
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a
+                        className="mx-4 p-2 rounded-full text-gray-500 font-medium transition-all 
+                        duration-200 ease-in-out hover:text-white hover:bg-gray-600"
+                        href="#"
+                    >
+                        Solutions
+                    </a>
+                </li>
+                <li>
+                    <a
+                        className="mx-4 p-2 rounded-full text-gray-500 font-medium transition-all 
+                        duration-200 ease-in-out hover:text-white hover:bg-gray-600"
+                        href="#"
+                    >
+                        Resources
+                    </a>
+                </li>
+            </ul>
+
+            {/* Navigation Buttons */}
+            <div className="flex items-center gap-4" id="navBtns">
+                {/* Search Button */}
+                <button
+                    onClick={toggleSearchBox}
+                    className="cursor-pointer text-gray-500 hover:text-gray-700"
+                >
+                    <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 
-                justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 
-                focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" 
-                aria-expanded="false">
-                    <span class="sr-only">
-                        Open main menu
-                    </span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border 
-                md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-white bg-blue-700 md:bg-transparent 
-                    hover:text-black md:dark:text-blue-700" aria-current="page">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 
-                    md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-black 
-                    dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-                    md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white 
-                    md:dark:hover:bg-transparent dark:border-gray-700">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent 
-                    md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white 
-                    md:dark:hover:bg-transparent dark:border-gray-700">
-                        Contact
-                    </a>
-                </li>
+
+                {/* Search Box */}
+                {isSearchOpen && (
+                    <div className="fixed inset-0 bg-gray-900 bg-opacity-80 flex justify-center items-center z-50">
+                        <div className="relative bg-white p-6 rounded-2xl shadow-lg w-[90%] max-w-[600px]">
+                            <button
+                                onClick={toggleSearchBox}
+                                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                            >
+                                <i className="fa-solid fa-xmark text-2xl"></i>
+                            </button>
+                            <div className="flex items-center gap-2">
+                                <input
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-full outline-none focus:ring-2 focus:ring-blue-500"
+                                    type="text"
+                                    placeholder="Search Location"
+                                    required
+                                />
+                                <button
+                                    className="w-12 h-12 flex justify-center items-center bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                                >
+                                    <i className="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Contact Us and Get Started Buttons */}
+                <ul className="hidden md:flex items-center gap-4">
+                    <li>
+                        <a
+                            className="mx-4 p-2 rounded-full text-gray-500 font-medium border-blue-500 
+                            transition-all duration-200 ease-in-out hover:bg-blue-600 hover:text-white"
+                            href="mailto:example@mail.com"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
                 </ul>
+
+                {/* Mobile Navigation Toggle */}
+                <button
+                    onClick={toggleMenu}
+                    className="block md:hidden text-gray-500 hover:text-gray-700"
+                >
+                    <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'} text-2xl`}></i>
+                </button>
             </div>
-        </div>
         </nav>
     );
 };
