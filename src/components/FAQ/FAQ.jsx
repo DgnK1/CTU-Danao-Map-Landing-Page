@@ -30,12 +30,12 @@ function FAQ() {
               title: "What is CTU Danao Map Directory?",
               content: (
                 <>
-                  <p className="mb-2 pl-8 pr-8 text-gray-500 dark:text-gray-400">
+                  <p className="mb-2 pl-8 pr-8 text-gray-900 dark:text-gray-700">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Tempore minus vero accusamus libero? Reprehenderit placeat ipsa officiis 
                     ab doloribus impedit illo facere, quam magnam similique ratione laboriosam asperiores animi nesciunt.
                   </p>
-                  <p className="text-gray-500 pl-8 pr-8 dark:text-gray-400">
+                  <p className="text-gray-500 pl-8 pr-8 dark:text-gray-700">
                     Check out this guide to learn how to{" "}
                     <a href="/docs/getting-started/introduction/" className="text-blue-600 dark:text-blue-500 hover:underline">
                       get started
@@ -49,12 +49,12 @@ function FAQ() {
               title: "How to use it because I am a dumbass?",
               content: (
                 <>
-                  <p className="mb-2 pl-8 pr-8 text-gray-500 dark:text-gray-400">
+                  <p className="mb-2 pl-8 pr-8 text-gray-900 dark:text-gray-700">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Tempore minus vero accusamus libero? Reprehenderit placeat ipsa officiis 
                     ab doloribus impedit illo facere, quam magnam similique ratione laboriosam asperiores animi nesciunt.
                   </p>
-                  <p className="pl-8 pr-8 text-gray-500 dark:text-gray-400">
+                  <p className="text-gray-500 pl-8 pr-8 dark:text-gray-700">
                     Check out this guide to learn how to{" "}
                     <a href="/docs/getting-started/introduction/" className="text-blue-600 dark:text-blue-500 hover:underline">
                       get started
@@ -68,12 +68,12 @@ function FAQ() {
               title: "How do I get started?",
               content: (
                 <>
-                  <p className="pl-8 pr-8 mb-2 text-gray-500 dark:text-gray-400">
+                  <p className="mb-2 pl-8 pr-8 text-gray-900 dark:text-gray-700">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Tempore minus vero accusamus libero? Reprehenderit placeat ipsa officiis 
                     ab doloribus impedit illo facere, quam magnam similique ratione laboriosam asperiores animi nesciunt.
                   </p>
-                  <p className="pl-8 pr-8 text-gray-500 dark:text-gray-400">
+                  <p className="text-gray-500 pl-8 pr-8 dark:text-gray-700">
                     Check out this guide to learn how to{" "}
                     <a href="/docs/getting-started/introduction/" className="text-blue-600 dark:text-blue-500 hover:underline">
                       get started

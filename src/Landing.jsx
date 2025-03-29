@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 import './Landing.css';
-import './components/Footer/Footer.css';
 
 import Navigation from './components/NavBar/Navigation';
 import MainSection from './components/Main/MainSection';
