@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function GallerySection() {
+function FAQ() {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -8,14 +8,14 @@ function GallerySection() {
   };
 
   return (
-    <section className="FAQ mt-16 mb-16 px-4 py-4 max-w-4xl mx-auto
+    <section className="FAQ mt-16 px-4 py-4 max-w-4xl mx-auto
     justify-center items-center">
       <p className="text-xl text-center font-medium text-gray-900 tracking-wide 
-      bg-gray-200 rounded-[25px] px-6 py-3 mb-12 mx-auto w-fit">
+      bg-gray-50 rounded-[25px] px-6 py-3 mb-12 mx-auto w-fit">
         FAQ
       </p>
       <header>
-        <h1 className="text-5xl font-semibold text-gray-900 tracking-wide text-center mb-12">
+        <h1 className="text-6xl font-medium text-gray-900 tracking-wide text-center mb-12">
           Have Any <h1 className="inline-block text-red-600">Questions?</h1>
         </h1>
         <p className="text-xl font-medium text-gray-600 tracking-wide text-center mb-6">
@@ -137,4 +137,4 @@ function GallerySection() {
   );
 }
 
-export default GallerySection;
+export default FAQ;

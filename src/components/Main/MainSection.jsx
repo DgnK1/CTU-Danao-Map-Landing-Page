@@ -19,7 +19,7 @@ const MainSection = () => {
 
   return (
     <section className="max-w-376 relative bg-gray-100 margin-auto text-center overflow-hidden 
-    mx-auto my-0 px-0 py-4 rounded-[2.5rem]">
+    mx-auto my-0 px-0 py-4 rounded-xl">
       {/* Background Image */}
       <div
         id="imageBackground"
