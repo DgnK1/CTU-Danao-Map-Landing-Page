@@ -1,3 +1,3 @@
 # React + Vite
 
-CTU Danao Map Landing Page OwO
+CTU Danao Map Landing Page
